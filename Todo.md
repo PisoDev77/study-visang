@@ -8,3 +8,20 @@
 
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo02.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo02.css)
 -   화면에 맞게 `Todo02.js`파일을 작성하세요.
+
+## Todo List 03
+
+> 24.01.
+
+![투두 3번째 예제 예시영상](./assets/Todo03-prolouge.gif)
+
+-   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo03.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo03.css)
+-   화면에 맞게 `Todo03.js`파일을 작성하세요.
+-   박스아이콘의 클래스명은 `bx bx-pencil bx-sm` 과 `bx bx-check bx-sm`입니다.
+
+```js
+// 수정 아이콘
+<i class="bx bx-pencil bx-sm"></i>
+// 수정 완료아이콘
+<i class="bx bx-check bx-sm"></i>
+```
