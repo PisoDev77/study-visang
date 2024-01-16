@@ -5,6 +5,7 @@
 	background: none;
 	border: none;
 	color: darkslategray;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 body {
 	background-color: rgb(238, 240, 241);
@@ -57,4 +58,17 @@ main {
 #TodoList {
 	min-width: 300px;
 	max-width: 80vw;
+}
+#TodoList > li:hover {
+	background-color: darkslategray;
+	color: orangered;
+	border-radius: 8px;
+}
+#TodoList > li {
+	padding: 8px 4px;
+
+	font-size: medium;
+	font-weight: 600;
+
+	list-style-type: lower-roman;
 }
