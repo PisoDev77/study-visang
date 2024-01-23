@@ -40,7 +40,7 @@
 
 > 24.01.
 
-![투두 5번째 예제 예시영상](./assets/Todo04-prolouge.gif)
+![투두 5번째 예제 예시영상](./assets/Todo05-prolouge.gif)
 
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo05.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo05.css)
 -   화면에 맞게 `Todo05.js`파일을 작성하세요.
@@ -50,7 +50,7 @@
 
 > 24.01.23
 
-![투두 6번째 예제 예시영상](./assets/Todo04-prolouge.gif)
+![투두 6번째 예제 예시영상](./assets/Todo06-prolouge.gif)
 
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo06.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo06.css)
 -   화면에 맞게 `Todo06.js`파일을 작성하세요.
