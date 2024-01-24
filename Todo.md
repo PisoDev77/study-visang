@@ -44,7 +44,7 @@
 
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo05.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo05.css)
 -   화면에 맞게 `Todo05.js`파일을 작성하세요.
--   저장한 Todo가 저장 삭제될 수 있도록 만들어주세요.
+-   완료한 Todo를 표시할 수 있도록 해주세요.
 
 ## Todo List 06
 
@@ -54,4 +54,13 @@
 
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo06.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo06.css)
 -   화면에 맞게 `Todo06.js`파일을 작성하세요.
--   저장한 Todo가 저장 삭제될 수 있도록 만들어주세요.
+-   Todo가 브라우저를 꺼도 저장될 수 있도록 해주세요.
+
+## Todo List 07
+
+> 24.01.24
+
+-   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo07.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo07.css)
+-   요구사항에 맞게 `Todo07.js`파일을 작성하세요.
+-   요구사항
+    -   코드가 90줄이 넘지 않도록 작성하세요.
