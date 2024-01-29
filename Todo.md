@@ -63,4 +63,12 @@
 -   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo07.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo07.css)
 -   요구사항에 맞게 `Todo07.js`파일을 작성하세요.
 -   요구사항
+
     -   코드가 90줄이 넘지 않도록 작성하세요.
+
+    ## Todo List 08
+
+> 24.01.29
+
+-   HTML, CSS 파일을 다운로드하세요. [HTML](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo08.html) / [CSS](https://github.com/PisoDev77/study-visang/blob/main/Todo/Todo08.css)
+-   코드의 중복을 줄이고 가독성을 높이세요.
