@@ -10,8 +10,8 @@ const exs = [
 	 * - `str01`이라는 함수명을 다른 이름으로 바꿔주세요.
 	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
 	 */
-	function str01() {
-		// Do it!!
+	function getSecondChar() {
+		// Do it
 	},
 ];
 
@@ -20,6 +20,4 @@ $inputEle.addEventListener('submit', (e) => {
 
 	const str01Input = e.target.str01;
 	str01Result.textContent = exs[0](str01Input.value);
-
-	console.log(str01Result);
 });
