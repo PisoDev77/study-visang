@@ -12,7 +12,6 @@ const exs = [
 	 */
 	function str01() {
 		// Do it!!
-		return 'ssss';
 	},
 ];
 
