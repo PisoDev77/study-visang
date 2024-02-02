@@ -1,7 +1,8 @@
 const $inputEle = document.getElementById('inputEle');
 
-const str01Subtitle = document.querySelector('.str01 > .sub-title');
 const str01Result = document.querySelector('.str01 > .result');
+const str02Result = document.querySelector('.str02 > .result');
+const str03Result = document.querySelector('.str02 > .result');
 
 const exs = [
 	/**
@@ -10,8 +11,31 @@ const exs = [
 	 * - `str01`이라는 함수명을 다른 이름으로 바꿔주세요.
 	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
 	 */
-	function getSecondChar() {
-		// Do it
+	function getSecondChar(str) {
+		return str.charAt(1);
+	},
+	/**
+	 * 아래에 주어진 변수에서 `CP`로 시작하는 요소를 모두 추출하는 함수
+	 * ### 요구사항
+	 * - 조건문(if, else)을 사용하지 않는다.
+	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
+	 * > arr 변수
+	 * ```
+	 * const arr = ['CP song','EG Lee', 'CP Hong', 'CP Kim', 'HR Long'];
+	 * ```
+	 *
+	 */
+	() => {
+		// Str 2번째
+		const arr = ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'];
+	},
+	/**
+	 * 영어를 입력받아, 모두 소문자로 바꾸어 반환해주는 함수
+	 * ### 요구사항
+	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
+	 */
+	() => {
+		// Str 3번째
 	},
 ];
 
@@ -20,4 +44,8 @@ $inputEle.addEventListener('submit', (e) => {
 
 	const str01Input = e.target.str01;
 	str01Result.textContent = exs[0](str01Input.value);
+
+	str02Result.textContent = exs[1]();
+
+	str03Result.textContent = exs[2]();
 });
