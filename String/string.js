@@ -2,7 +2,7 @@ const $inputEle = document.getElementById('inputEle');
 
 const str01Result = document.querySelector('.str01 > .result');
 const str02Result = document.querySelector('.str02 > .result');
-const str03Result = document.querySelector('.str02 > .result');
+const str03Result = document.querySelector('.str03 > .result');
 
 const exs = [
 	/**
@@ -25,27 +25,21 @@ const exs = [
 	 * ```
 	 *
 	 */
-	() => {
-		// Str 2번째
-		const arr = ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'];
-	},
+	() => ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'].filter((i) => i.startsWith('CP')),
 	/**
 	 * 영어를 입력받아, 모두 소문자로 바꾸어 반환해주는 함수
 	 * ### 요구사항
 	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
 	 */
-	() => {
-		// Str 3번째
-	},
+	(str) => str.toLowerCase(),
 ];
 
-$inputEle.addEventListener('submit', (e) => {
-	e.preventDefault();
+$inputEle.addEventListener('change', (e) => {
+	const { str01: str01Input, str03: str03Input } = e.currentTarget;
 
-	const str01Input = e.target.str01;
 	str01Result.textContent = exs[0](str01Input.value);
 
 	str02Result.textContent = exs[1]();
 
-	str03Result.textContent = exs[2]();
+	str03Result.textContent = exs[2](str03Input.value);
 });
