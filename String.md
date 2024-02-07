@@ -43,3 +43,25 @@ const arr = ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'];
 ### 요구사항
 
 -   html,css,js의 다른 부분은 건들지 말아주세요.
+
+## 6. 동일한 page 만드세요.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>String 연습</title>
+	</head>
+	<body>
+		<main id="root"></main>
+		<script src="./string.js"></script>
+	</body>
+</html>
+```
+
+### 요구사항
+
+-   js만 가지고 만들어주세요.
