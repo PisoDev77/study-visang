@@ -1,66 +1,50 @@
-const $inputEle = document.getElementById('inputEle');
+const $root = document.getElementById('root');
 
-const str01Result = document.querySelector('.str01 > .result');
-const str02Result = document.querySelector('.str02 > .result');
-const str03Result = document.querySelector('.str03 > .result');
-const str04Result = document.querySelector('.str04 > .result');
-const str05Result = document.querySelector('.str05 > .result');
-
-const exs = [
-	/**
-	 * 문자열를 입력 받아, 그 문자열의 2번째 문자를 출력하는 함수
-	 * ### 요구사항
-	 * - `str01`이라는 함수명을 다른 이름으로 바꿔주세요.
-	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
-	 */
-	function getSecondChar(str) {
-		return str.charAt(1);
-	},
-	/**
-	 * 아래에 주어진 변수에서 `CP`로 시작하는 요소를 모두 추출하는 함수
-	 * ### 요구사항
-	 * - 조건문(if, else)을 사용하지 않는다.
-	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
-	 * > arr 변수
-	 * ```
-	 * const arr = ['CP song','EG Lee', 'CP Hong', 'CP Kim', 'HR Long'];
-	 * ```
-	 *
-	 */
-	() => ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'].filter((i) => i.startsWith('CP')),
-	/**
-	 * 영어를 입력받아, 모두 소문자로 바꾸어 반환해주는 함수
-	 * ### 요구사항
-	 * - html,css,js의 다른 부분은 걷들지 말아주세요.
-	 */
-	(str) => str.toLowerCase(),
-	/**
-	 * 문자열의 길이를 반환하는 함수
-	 * @param {string} str
-	 * @returns
-	 */
-	(str) => {
-		// Do it!
-	},
-	/**
-	 * 입력받은 문자 A를 a로 바꾸는 함수
-	 * @param {string} str
-	 */
-	() => {
-		const str = 'A B C D A A B N D D C C E E';
-	},
+/**
+ * 각 String 연습 section의 자식 요소를 객체로 가지는 배열
+ */
+const stringExams = [
+	{ subTitle: '2번째 문자는?', input: { label: '문자열', placeholder: `문자열을 입력하고 'Enter'를 누르세요.` } },
+	{ subTitle: 'CP들은?' },
+	{ subTitle: '소문자로 바꾸니', input: { label: '영어를', placeholder: `영어를 입력하고 'Enter'를 누르세요.` } },
+	{ subTitle: '길이는?', input: { label: '영어를', placeholder: `길이를 반환할 문자열을 입력하세요.` } },
+	{ subTitle: '<p>A B C D A A B N D D C C E E</p>A를 모두 a로 바꾸면?' },
 ];
 
-$inputEle.addEventListener('change', (e) => {
-	const { str01: str01Input, str03: str03Input, str04: str04Input } = e.currentTarget;
+//prettier-ignore
+$root.innerHTML =`
+<h1>String 연습하기</h1>
+<form id="inputEle" onsubmit>
+${stringExams.map(({subTitle, input}, idx)=>`
+    <h2>String ${(idx + 1 + '').padStart(2, 0)}</h2>
+    <section class="str02 strSection">
+        ${(input && `
+        <label for="str01">${input.label}</label>
+        <input type="text" name="str${(idx + 1 + '').padStart(2, 0)}" placeholder="${input.placeholder}" />
+        `) ?? ''}
+        <p class="sub-title">${subTitle}</p>
+        <h4 class="result"></h4>
+    </section>
+`).join('')}
+</form>`;
 
-	str01Result.textContent = exs[0](str01Input.value);
+/* =========================================================================================================================== */
 
-	str02Result.textContent = exs[1]();
+// Stirng 함수 배열
+const exs = [
+	(str) => str.charAt(1),
+	() => ['CP song', 'EG Lee', 'CP Hong', 'CP Kim', 'HR Long'].filter((i) => i.startsWith('CP')),
+	(str) => (str ?? '').toLowerCase(),
+	(str) => (str ?? '').length,
+	() => 'A B C D A A B N D D C C E E'.replace(/A/g, 'a'),
+];
 
-	str03Result.textContent = exs[2](str03Input.value);
-
-	str04Result.textContent = exs[3](str04Input.value);
-
-	str05Result.textContent = exs[4]();
+/**
+ * root전역에 이벤트를 감시한다.
+ */
+$root.addEventListener('change', () => {
+	document.querySelectorAll('.result').forEach((strRes, idx) => {
+		const inputValue = document.querySelector(`input[name="str${(idx + 1 + '').padStart(2, 0)}"]`)?.value;
+		strRes.textContent = inputValue ? exs[idx](inputValue.trim() === '' ? '' : inputValue) : exs[idx]();
+	});
 });
